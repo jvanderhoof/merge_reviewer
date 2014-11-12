@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = MergeReviewer::VERSION
   spec.authors       = ["Jason Vanderhoof"]
   spec.email         = ["jvanderhoof@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Get complexity and duplication for  a single file, or all of them.}
+  spec.description   = %q{Gem that simplifies the process of getting complexity and duplication for  a single file.}
   spec.homepage      = ""
   spec.license       = "MIT"
 

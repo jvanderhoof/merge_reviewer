@@ -5,10 +5,9 @@ class Flayer < Analyzer
     files = Flay.expand_dirs_to_files(path)
     flay = Flay.new
     flay.process(*files)
-    file = File.new('flay-output.txt', 'w+')
+    file = Tempfile.new('flay-output')
     flay.report(file)
-
-    file = File.open("flay-output.txt")
+    file.rewind
     @results = build_file_flog_score(file)
   end
 

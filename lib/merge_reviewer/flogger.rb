@@ -7,10 +7,9 @@ class Flogger < Analyzer
     flogger = FlogCLI.new(FlogCLI.parse_options(["-b", "-g"]))
     flogger.flog(folders)
     
-    file = File.new('flog-output.txt', 'w+')
+    file = Tempfile.new('flog-output')
     flogger.report(file)
-    file = File.open("flog-output.txt")
-
+    file.rewind
     @results = build_file_flog_score(file)
   end
 
